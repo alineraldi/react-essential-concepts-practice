@@ -6,11 +6,11 @@ function ToDoList() {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
 
-    handleInputChange = (event) => {
+    const handleInputChange = (event) => {
         setNewTask(event.target.value);
     }
 
-    handleAddTask = () => {
+    const handleAddTask = () => {
         if (newTask.trim() === "") {
             return;
         }
@@ -19,13 +19,36 @@ function ToDoList() {
         setNewTask('');
     };
 
-    handleRemoveTask = () => {
-
+    const handleRemoveTask = (index) => {
+        const updatedTasks = tasks.filter((_, i) => i !== index);
+        setTasks(updatedTasks);
     }
 
-    listTasks = () => {
+    return (
+        <div>
+            <h1>Tasks List</h1>
+            <input
+                type="text"
+                value={newTask}
+                onChange={handleInputChange}
+                placeholder="Type a new task here!"
+            />
 
-    }
+            <br />
+            <br />
+
+            <button onClick={handleAddTask}>Add task</button>
+
+            <ul>
+                {tasks.map((task, index) => (
+                    <li key={index}>
+                        {task}
+                        <button onClick={() => handleRemoveTask(index)} style={{ marginLeft: '10px' }}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }
 
 export default ToDoList
