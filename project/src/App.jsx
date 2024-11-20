@@ -19,19 +19,19 @@ function App() {
     <Router>
       <nav>
         <div>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem'}}><Link to="/">Home</Link></button>
+          <button style={{ marginRight: '2rem', marginBottom: '2rem', background: 'transparent'}}><Link to="/"><img src="/icon-house.png" alt="Home" /></Link></button>
           </div>
           <div>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem'}}><Link to="/counter">Simply count</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/background-color-changer">Background Changer</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/to-do-list">ToDo List</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/timer">Time passing</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/name-filter">Find someone</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/signup">Sign Up</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/post-list">Read random posts in latin</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/image-gallery">Look at some birds</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/timer-interval-alert">Set a time-bomb!</Link></button>
-          <button style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/tabs">Choose between two planets</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem'}}><Link to="/counter">TSCOTP</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/background-color-changer">Background Changer</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/to-do-list">ToDo List</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/timer">Time passing</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/name-filter">Find someone</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/signup">Sign Up</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/post-list">Read random posts in latin</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/image-gallery">Look at some birds</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/timer-interval-alert">Set a time-bomb!</Link></button>
+          <button class='main-btns' style={{ marginRight: '2rem', marginBottom: '2rem' }}><Link to="/tabs">Choose between two planets</Link></button>
           </div>
       </nav>
 

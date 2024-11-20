@@ -11,9 +11,10 @@ class Counter extends Component {
     render() {
         return(
             <div>
-                <p>Counter: { this.state.count }</p>
+                <h2>Hey there! Check this out</h2>
+                <h2>The Simplest Counter On The Planet (TSCOTP)<br/> { this.state.count }</h2>
 
-                <button onClick={() => {
+                <button style = {{ marginRight: '1rem' }} onClick={() => {
                         this.setState({ count: this.state.count + 1});
                 }}>Increment</button>
 

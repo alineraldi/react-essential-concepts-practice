@@ -33,7 +33,7 @@ function SignUpForm() {
     function WelcomeMessage({ name }) {
         return (
             <div>
-                <h2>Welcome, {name}</h2>
+                <h2>Ah... {name}! What a beautiful name. Welcome.</h2>
             </div>
         );
     }
@@ -42,10 +42,11 @@ function SignUpForm() {
         registrySuccess ? (
             <WelcomeMessage name={userData.name} />
         ) : (
-            <form onSubmit={handleSignUp}>
+            <form style={{ margin: 'auto', maxWidth: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }} onSubmit={handleSignUp}>
                 <h1>Sign up</h1>
                 <label htmlFor="name">Name: </label>
                 <input
+                    style={{ padding: '1rem', fontSize: '1rem' }}
                     type="text"
                     name="name"
                     value={userData.name}
@@ -54,6 +55,7 @@ function SignUpForm() {
                 <br />
                 <label htmlFor="email">E-mail: </label>
                 <input
+                    style={{ padding: '1rem', fontSize: '1rem' }}
                     type="email"
                     name="email"
                     value={userData.email}
@@ -62,15 +64,14 @@ function SignUpForm() {
                 <br />
                 <label htmlFor="password">Password: </label>
                 <input
+                    style={{ padding: '1rem', fontSize: '1rem' }}
                     type="password"
                     name="password"
                     value={userData.password}
                     onChange={handleChange}
                 />
-                <br />
                 {message && <p>{message}</p>}
-                <br />
-                <button type="submit">Sign Up</button>
+                <button style={{ marginTop: '1rem' }} type="submit">Sign Up</button>
             </form>
         )
     );

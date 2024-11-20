@@ -97,7 +97,7 @@ function ImageGallery() {
 
   return (
     <div>
-      <h1>The Bird Gallery</h1>
+      <h1 style={{ fontFamily: 'serif' }}>The Bird Gallery 🦃</h1>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: 'center' }}>
         {images.map((image, index) => (
           <img
@@ -131,8 +131,13 @@ function ImageGallery() {
             alt={images[selectedImage].title}
             style={{ maxWidth: "80%", maxHeight: "60%" }}
           />
-          <p>{images[selectedImage].title}</p>
-          <p><button onClick={showPrevImage}>←</button>
+          <label for="cuteness" style={{ marginTop: '1rem' }}>Is it a cute picture? </label>
+          <select id="cuteness" style={{ padding: '1.5rem', marginTop: '1rem', width: '30%', fontSize: '1.5rem', fontFamily: 'Orbitron'}}>
+            <option> </option>
+            <option>Yes</option>
+            <option>Yes</option>
+          </select>
+          <p><button style = {{ marginRight: '1rem' }} onClick={showPrevImage}>←</button>
           <button onClick={showNextImage}>→</button></p>
           <button
             onClick={closeModal}

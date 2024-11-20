@@ -36,7 +36,7 @@ function Timer() {
             <button onClick={startTimer}>Click and notice the passing of time:</button>
             <br />
             <h3>{seconds}</h3>
-            <button onClick={pauseTimer}>Pause</button>
+            <button style = {{ marginRight: '1rem'}} onClick={pauseTimer}>Pause</button>
             <button onClick={resetTimer}>Reset</button>
         </div>
     )

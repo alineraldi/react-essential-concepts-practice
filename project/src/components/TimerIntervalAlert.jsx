@@ -18,7 +18,7 @@ function TimerIntervalAlert() {
             setSeconds((prev) => {
                 if (prev <= 1) {
                     clearInterval(interval);
-                    alert("bang!!!!!!");
+                    alert("💥💥bang!!!!!!💥💥");
                     return 0;
                 }
                 return prev -1
@@ -53,20 +53,19 @@ function TimerIntervalAlert() {
         <div>
             <h4>Welcome to the Simple Time Bomb: <i>Where you can safely detonate a bomb 😊</i></h4>
                 <input
+                    style={{ padding: '1.5rem', fontSize: '2rem' }}
                     type="number"
                     name="timer"
                     onChange={handleChange}
                     value={userInput}
                     placeholder="Enter time in seconds"
                 />
+            <button id="bomb-timer-setter" style= {{ marginLeft: '1rem', padding: '1.5rem', fontSize: '2rem' }} onClick={handleInputSubmit}>Set timer</button>
             <br />
-            <br />
-            <button onClick={handleInputSubmit}>Set timer</button>
-            <br />
-            <h1>{seconds} seconds</h1>
-            <button onClick={startTimer}>Start</button>
-            <button onClick={pauseTimer}>Pause</button>
-            <button onClick={resetTimer}>Reset</button>
+            <h1 id="bomb-timer">{seconds} seconds</h1>
+            <button id="bomb-start" style = {{ marginRight: '1rem' }} onClick={startTimer}>Start</button>
+            <button class="bomb-btns" style = {{ marginRight: '1rem' }} onClick={pauseTimer}>Pause</button>
+            <button class="bomb-btns" onClick={resetTimer}>Reset</button>
         </div>
     )
 }

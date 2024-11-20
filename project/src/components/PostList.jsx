@@ -32,17 +32,17 @@ function PostList() {
     return(
         <div>
             <h1>Posts List</h1>
-            <button onClick={handleReload}>Reload</button>
-            <br />
+            <button class="main-btns" onClick={handleReload}>Reload</button>
+
             {isLoading ? (
                 <p>Loading posts...</p>
             ): (
                 <>
-                <ul style={{ listStyleType: 'none'}}>
+                <ul style={{ listStyleType: 'none', margin: 'auto', width: '50%', textAlign: 'left'}}>
                     {posts.map((post) => (
-                        <li key={post.id}>
+                        <li style={{ marginTop: '2rem' }} key={post.id}>
                             <strong>{post.title}</strong>
-                            <p>{post.body}</p>
+                            <p style={{ fontFamily: 'Nunito Sans, sans-serif' }}>{post.body}</p>
                         </li>
                     ))}
                 </ul>                

@@ -40,7 +40,7 @@ function NameFilter() {
             ) : (
                 <>
                     <input 
-                    style= {{padding: '10px'}}
+                    style= {{padding: '10px', textAlign: 'center' }}
                     type="text"
                     value={searchInput}
                     onChange={handleNameInput}
