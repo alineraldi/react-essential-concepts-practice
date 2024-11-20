@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 
 function ImageGallery() {
+  // Estado para armazenar as imagens
   const [images, setImages] = useState([]);
+  // Estado para armazenar o índice da imagem selecionada (null se nenhuma imagem for selecionada)
   const [selectedImage, setSelectedImage] = useState(null);
 
 
-  useEffect(() => {
+ // useEffect que carrega as imagens assim que o componente é montado, e dados das imagens, que normalmente viriam de uma API, mas quis imagens personalizadas
+  useEffect(() => {    
     const fetchImages = async () => {
       const data = [
         {
@@ -72,9 +75,10 @@ function ImageGallery() {
       },        
 
       ];
+      // Atualiza o estado com as imagens
       setImages(data);
     };
-
+// [] significa que o efeito será executado uma vez, logo após o componente ser montado
     fetchImages();
   }, []);
 

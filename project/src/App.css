@@ -49,19 +49,38 @@ body::before {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.shiny-button {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb, #ff9a9e);
+  background-size: 400% 400%; /* Larger than button for smooth movement */
+  animation: shine 8s ease-in-out infinite;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shiny-button:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+
 }
 
 .card {
@@ -83,9 +102,8 @@ body::before {
   border-radius: 10px;
   font-family: 'VT323', sans-serif;
   letter-spacing: 0.2rem;
-
   box-shadow: 0 0 20px white; 
-  transition: all 0.3s ease-in-out; 
+  transition: all 3s ease-in-out; 
 }
 
 .main-btns:before {
@@ -101,7 +119,7 @@ body::before {
   height: calc(100% + 4px);
   animation: glowing 2s linear infinite;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 1s ease-in-out;
   border-radius: 10px;
 }
 
