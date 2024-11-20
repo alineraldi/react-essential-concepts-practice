@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 
-function ColorChanger() {
+function BackgroundColorChanger() {
     const [color, setColor] = useState('#FFFFFF');
 
     const getRandomColor = () => {
@@ -27,4 +27,4 @@ function ColorChanger() {
     );
 }
 
-export default ColorChanger;
+export default BackgroundColorChanger;

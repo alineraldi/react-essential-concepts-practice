@@ -25,9 +25,10 @@ function ToDoList() {
     }
 
     return (
-        <div>
+        <div style={{ margin: 'auto', width: '20rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h1>Tasks List</h1>
             <input
+                style={{ padding: '2rem' }}
                 type="text"
                 value={newTask}
                 onChange={handleInputChange}
@@ -41,7 +42,7 @@ function ToDoList() {
 
             <ul>
                 {tasks.map((task, index) => (
-                    <li key={index}>
+                    <li style={{listStyleType: 'none' }} key={index}>
                         {task}
                         <button onClick={() => handleRemoveTask(index)} style={{ marginLeft: '10px' }}>Delete</button>
                     </li>

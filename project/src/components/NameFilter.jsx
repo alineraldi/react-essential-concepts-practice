@@ -33,23 +33,23 @@ function NameFilter() {
     };
 
     return (
-        <div>
+        <div style={{ margin: 'auto', width: '30rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h1>Find a specific person</h1>
-            <br />
             {isLoading ? (
                 <p>Loading names...</p>
             ) : (
                 <>
                     <input 
+                    style= {{padding: '10px'}}
                     type="text"
                     value={searchInput}
                     onChange={handleNameInput}
                     placeholder="Who are you looking for?"
                 />
 
-                <ul style={{ listStyleType: 'none'}}>
+                <ul>
                     {filteredNames.map(user => (
-                        <li key={user.id}>{user.name}</li>
+                        <li style={{ listStyleType: 'none'}} key={user.id}>{user.name}</li>
                     ))}
                 </ul>
             </>
