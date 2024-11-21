@@ -60,7 +60,7 @@ Cada atividade aborda um conceito ou funcionalidade específica no React. Na pá
 
 ---
 
-### 8. **Galeria de Imagens com Visualização Detalhada 🐦‍⬛ **
+### 8. Galeria de Imagens com Visualização Detalhada 🐦‍⬛ 
 - **Descrição:** Navegue pelas imagens e visualize-as ampliadas em um modal.
 - **Destaque:** Navegação entre imagens e botão para fechar o modal.
 - **Conceitos usados:** `useState`.
