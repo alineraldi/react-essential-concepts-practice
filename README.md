@@ -145,5 +145,5 @@ project
 
 components/: Cada pasta contém os componentes relacionados a uma atividade.
 styles/: Estilos globais ou específicos para componentes.
-App.js: Página principal que serve como menu de navegação.
+App.jsx: Página principal que serve como menu de navegação.
 ```
