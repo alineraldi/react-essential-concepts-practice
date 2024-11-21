@@ -1,8 +1,7 @@
 // Importando os hooks e componentes necessários do React
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import './App.css'
-
+import './styles/App.css'
 // Importando os componentes para as rotas
 import Home from './components/Home'
 import Counter from './components/Counter'
