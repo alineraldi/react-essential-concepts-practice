@@ -55,8 +55,8 @@ function Tabs() {
                 <h2>Earth</h2>
                 {/* Imagem da Terra */}
                 <img style={{ maxWidth: '10rem' }} src="https://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png" alt="Planet Earth"/>
-                <p>Safe at home. This is your default choice. The place you were born.</p> 
-                <p>How about trying another atmosphere for a change?</p>
+                <h3>Safe at home. This is your default choice. The place you were born.</h3> 
+                <h3>How about trying another atmosphere for a change?</h3>
             </div>
         )}
         {/* Se a aba ativa for 'neptune', exibe a informação sobre Netuno */}
